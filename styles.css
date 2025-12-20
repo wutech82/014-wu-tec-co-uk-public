@@ -1,0 +1,4 @@
+/* Canonical stylesheet (root) — imports canonical CSS authored under assets/css/style.css
+   The single-source canonical stylesheet for the site is this file (per project constitution).
+*/
+@import url('assets/css/style.css');
