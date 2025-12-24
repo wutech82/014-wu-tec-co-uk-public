@@ -25,6 +25,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // If a real action is present, intercept and submit via fetch for better UX
     e.preventDefault();
+
+    // Verify reCAPTCHA
+    if (typeof grecaptcha !== 'undefined') {
+      var response = grecaptcha.getResponse();
+      if (response.length === 0) {
+        showMessage('Please complete the reCAPTCHA.', true);
+        return;
+      }
+    }
+
     var data = new FormData(form);
     showMessage('Sending…');
 
@@ -38,6 +48,9 @@ document.addEventListener('DOMContentLoaded', function () {
       if (res.ok) {
         showMessage('Thanks — your message was sent.');
         form.reset();
+        if (typeof grecaptcha !== 'undefined') {
+          grecaptcha.reset();
+        }
       } else {
         return res.json().then(function (json) {
           var err = (json && json.error) ? json.error : 'Submission failed. Please try again or use the mailto link.';
