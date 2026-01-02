@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Product documentation." />
+  <title>Product — WU Technologies</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/assets/css/products.css">
+</head>
+<body class="product-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="product-header" role="banner">
+    <div class="container">
+      <a class="product-brand" href="/"><span class="product-brand-w">W</span><span class="product-brand-u">U</span> Technologies</a>
+      <nav class="product-nav" role="navigation" aria-label="Primary">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="product-container">
+    <main id="main" role="main" class="product-main">
+      <div class="product-wrapper">
+        <section class="product-hero" aria-labelledby="product-title">
+          <h1 id="product-title">Product Name</h1>
+          <p class="subhead">Product description</p>
+        </section>
+        <div class="product-content" id="product-content"></div>
+      </div>
+    </main>
+
+    <footer class="product-footer" role="contentinfo">
+      <div class="container">
+        <p>&copy; 2025 <a href="/">Wu Technologies</a>. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="/assets/js/product-renderer.js"></script>
+  <script>
+    const renderer = new ProductRenderer('product-name');
+    document.addEventListener('DOMContentLoaded', async () => {
+      await renderer.init({
+        'Privacy': '/products/product-name/privacy.md',
+        'Support': '/products/product-name/support.md',
+      });
+    });
+  </script>
+</body>
+</html>

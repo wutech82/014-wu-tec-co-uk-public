@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="WU Technologies Products — Innovative software solutions." />
+  <title>Products — WU Technologies</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/assets/css/products.css">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GWC6PDJ1P0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GWC6PDJ1P0');
+  </script>
+  <style>
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+
+    .product-card {
+      background: var(--product-code-bg);
+      border: 2px solid var(--product-code-border);
+      border-radius: 4px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-card:hover {
+      border-color: var(--product-accent);
+      box-shadow: 0 0 20px rgba(0, 217, 255, 0.2);
+    }
+
+    .product-card h3 {
+      font-size: 1.5rem;
+      color: var(--product-accent);
+      margin: 0 0 0.5rem;
+      font-family: 'Courier New', monospace;
+    }
+
+    .product-card p {
+      flex: 1;
+      color: var(--product-muted);
+      margin: 0 0 1.5rem;
+    }
+
+    .product-card a {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: var(--product-accent);
+      color: var(--product-bg);
+      text-decoration: none;
+      border-radius: 4px;
+      transition: all 0.2s ease;
+      font-weight: 600;
+      font-family: 'Courier New', monospace;
+      width: fit-content;
+    }
+
+    .product-card a:hover {
+      background: var(--product-link-hover);
+      transform: translateX(2px);
+    }
+  </style>
+</head>
+
+<body class="product-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Product Header with Navigation -->
+  <header class="product-header" role="banner">
+    <div class="container">
+      <a class="product-brand" href="/">
+        <span class="product-brand-w">W</span><span class="product-brand-u">U</span> Technologies
+      </a>
+      <nav class="product-nav" role="navigation" aria-label="Primary">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/products/">Products</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Product Container -->
+  <div class="product-container">
+    <!-- Main Content -->
+    <main id="main" role="main" class="product-main">
+      <div class="product-wrapper">
+        <!-- Hero Section -->
+        <section class="product-hero">
+          <h1>Our Products</h1>
+          <p class="subhead">Innovative solutions built on privacy, security, and simplicity.</p>
+        </section>
+
+        <!-- Products Grid -->
+        <div class="products-grid">
+          <div class="product-card">
+            <h3>Link-Lock</h3>
+            <p>Secure password-protected link sharing with end-to-end encryption. Share sensitive information safely without exposing metadata.</p>
+            <a href="/products/link-lock/">Learn More →</a>
+          </div>
+
+          <div class="product-card">
+            <h3>Coming Soon</h3>
+            <p>We're working on new products to expand our suite of privacy-first solutions. Check back soon for announcements.</p>
+            <a href="/contact.html">Get Notified →</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Product Footer -->
+    <footer class="product-footer" role="contentinfo">
+      <div class="container">
+        <p>&copy; 2025 <a href="/">Wu Technologies</a>. All rights reserved.</p>
+        <p>
+          <a href="/privacy.html">Privacy Policy</a> · 
+          <a href="/contact.html">Contact</a>
+        </p>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

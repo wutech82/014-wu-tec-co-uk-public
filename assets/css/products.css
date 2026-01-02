@@ -1,0 +1,389 @@
+/* Cyber-Minimalist Products Theme — Dark Mode with Monospace Accents */
+
+:root {
+  /* Dark mode palette */
+  --product-bg: #0a0e27;
+  --product-text: #e0e6ed;
+  --product-muted: #a0aac0;
+  --product-muted-dark: #6b7a99;
+  --product-border: #1a2342;
+  --product-accent: #00d9ff;
+  --product-accent-secondary: #7c3aed;
+  --product-code-bg: #0f1323;
+  --product-code-border: #1a2342;
+  --product-link: #00d9ff;
+  --product-link-hover: #00f5ff;
+  
+  /* Spacing */
+  --product-section-gap: 3rem;
+  --product-element-gap: 2rem;
+}
+
+/* Content Wrapper — Full bleed dark background */
+body.product-page {
+  background: var(--product-bg);
+  color: var(--product-text);
+}
+
+.product-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-header {
+  background: linear-gradient(135deg, #0f1323 0%, #1a2342 100%);
+  border-bottom: 2px solid var(--product-accent);
+  padding: 1.5rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.product-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-brand {
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.5rem;
+  letter-spacing: -0.5px;
+  color: var(--product-accent);
+  font-family: 'Courier New', monospace;
+}
+
+.product-brand-w {
+  color: #5c7c8a;
+}
+
+.product-brand-u {
+  color: var(--product-accent);
+}
+
+.product-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+.product-nav a {
+  text-decoration: none;
+  color: var(--product-muted);
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: color 0.2s ease;
+  font-family: 'Courier New', monospace;
+}
+
+.product-nav a:focus,
+.product-nav a:hover {
+  color: var(--product-accent);
+}
+
+/* Main Content Area */
+.product-main {
+  flex: 1;
+  padding: var(--product-section-gap) 0;
+}
+
+.product-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Hero Section */
+.product-hero {
+  margin-bottom: var(--product-section-gap);
+  text-align: center;
+}
+
+.product-hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+  font-family: 'Courier New', monospace;
+  color: var(--product-accent);
+  letter-spacing: -1px;
+}
+
+.product-hero .subhead {
+  font-size: 1.1rem;
+  color: var(--product-muted);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Content Sections — Markdown Rendered */
+.product-content {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.product-content section {
+  margin-bottom: var(--product-element-gap);
+  padding: 0;
+}
+
+/* Headings */
+.product-content h2,
+.product-content h3,
+.product-content h4 {
+  font-family: 'Courier New', monospace;
+  font-weight: 700;
+  margin: 2rem 0 1rem;
+  letter-spacing: -0.5px;
+}
+
+.product-content h2 {
+  font-size: 1.75rem;
+  color: var(--product-accent);
+  border-bottom: 2px solid var(--product-accent-secondary);
+  padding-bottom: 0.5rem;
+}
+
+.product-content h3 {
+  font-size: 1.35rem;
+  color: var(--product-accent-secondary);
+}
+
+.product-content h4 {
+  font-size: 1.1rem;
+  color: var(--product-link);
+}
+
+.product-content p {
+  margin: 1.2rem 0;
+  color: var(--product-text);
+}
+
+/* Links */
+.product-content a {
+  color: var(--product-link);
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.product-content a:hover {
+  color: var(--product-link-hover);
+  text-decoration-thickness: 2px;
+}
+
+/* Lists */
+.product-content ul,
+.product-content ol {
+  margin: 1.5rem 0;
+  padding-left: 2rem;
+}
+
+.product-content li {
+  margin: 0.75rem 0;
+  color: var(--product-text);
+}
+
+.product-content li::marker {
+  color: var(--product-accent);
+}
+
+/* Code Blocks */
+.product-content pre {
+  background: var(--product-code-bg);
+  border: 1px solid var(--product-code-border);
+  border-left: 4px solid var(--product-accent);
+  border-radius: 4px;
+  padding: 1.5rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 0.9rem;
+}
+
+.product-content code {
+  font-family: 'Courier New', monospace;
+  background: var(--product-code-bg);
+  padding: 0.25rem 0.5rem;
+  border-radius: 2px;
+  color: var(--product-accent);
+  font-size: 0.9em;
+}
+
+.product-content pre code {
+  background: transparent;
+  padding: 0;
+  color: var(--product-text);
+}
+
+/* Blockquotes */
+.product-content blockquote {
+  border-left: 4px solid var(--product-accent-secondary);
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+  color: var(--product-muted);
+  font-style: italic;
+}
+
+/* Tables */
+.product-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  border: 1px solid var(--product-border);
+}
+
+.product-content th,
+.product-content td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--product-border);
+}
+
+.product-content th {
+  background: var(--product-code-bg);
+  color: var(--product-accent);
+  font-weight: 700;
+  font-family: 'Courier New', monospace;
+}
+
+.product-content tr:hover {
+  background: rgba(0, 217, 255, 0.05);
+}
+
+/* Horizontal Rule */
+.product-content hr {
+  border: none;
+  border-top: 2px solid var(--product-accent-secondary);
+  margin: 3rem 0;
+}
+
+/* Two-Column Content Layout */
+.product-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--product-element-gap);
+  margin: var(--product-element-gap) 0;
+}
+
+.product-content-grid > div {
+  background: var(--product-code-bg);
+  border: 1px solid var(--product-code-border);
+  border-radius: 4px;
+  padding: 1.5rem;
+}
+
+/* Footer */
+.product-footer {
+  background: linear-gradient(135deg, #0f1323 0%, #1a2342 100%);
+  border-top: 2px solid var(--product-accent-secondary);
+  margin-top: auto;
+  padding: 3rem 0;
+}
+
+.product-footer .container {
+  text-align: center;
+}
+
+.product-footer p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: var(--product-muted);
+}
+
+.product-footer a {
+  color: var(--product-link);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.product-footer a:hover {
+  color: var(--product-link-hover);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product-hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .product-hero .subhead {
+    font-size: 1rem;
+  }
+
+  .product-nav ul {
+    gap: 1rem;
+  }
+
+  .product-nav a {
+    font-size: 11px;
+  }
+
+  .product-content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-content h2 {
+    font-size: 1.35rem;
+  }
+
+  .product-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .product-content table {
+    font-size: 0.85rem;
+  }
+
+  .product-content th,
+  .product-content td {
+    padding: 0.75rem;
+  }
+}
+
+/* Loading & Error States */
+.product-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  color: var(--product-muted);
+  font-family: 'Courier New', monospace;
+  font-size: 1.1rem;
+}
+
+.product-loading::after {
+  content: '█';
+  animation: blink 1s infinite;
+  margin-left: 0.5rem;
+}
+
+@keyframes blink {
+  0%, 49% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+}
+
+.product-error {
+  background: var(--product-code-bg);
+  border: 2px solid var(--product-accent-secondary);
+  border-radius: 4px;
+  padding: 2rem;
+  text-align: center;
+  color: var(--product-accent-secondary);
+  font-family: 'Courier New', monospace;
+}
+
+.product-error strong {
+  display: block;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
