@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wu-tec.co.uk/sitemap.xml
