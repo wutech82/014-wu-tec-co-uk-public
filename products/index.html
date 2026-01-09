@@ -25,13 +25,20 @@
   <meta name="twitter:image" content="https://wu-tec.co.uk/assets/img/og-image.png" />
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="/assets/css/products.css">
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GWC6PDJ1P0"></script>
+  <!-- Consent-first Analytics (UK GDPR/PECR) -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      functionality_storage: 'denied',
+      security_storage: 'granted'
+    });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GWC6PDJ1P0"></script>
+  <script>
     gtag('js', new Date());
-    gtag('config', 'G-GWC6PDJ1P0');
   </script>
   <style>
     .products-grid {
@@ -141,15 +148,15 @@
 
     <!-- Product Footer -->
     <footer class="product-footer" role="contentinfo">
-      <div class="container">
-        <p>&copy; 2025 <a href="/">Wu Technologies</a>. All rights reserved.</p>
-        <p>
-          <a href="/privacy">Privacy Policy</a> ·
-          <a href="/contact">Contact</a>
+      <div class="container footer-content">
+        <p class="footer-copyright">&copy; 2025 <a href="/">Wu Technologies</a>. All rights reserved.</p>
+        <p class="footer-links">
+          <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a>
         </p>
       </div>
     </footer>
   </div>
+  <script src="/assets/js/cookie-consent.js" defer></script>
 </body>
 
 </html>

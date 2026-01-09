@@ -9,6 +9,21 @@
   <link rel="canonical" href="https://wu-tec.co.uk/products/site-sync/" />
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="/assets/css/products.css">
+  <!-- Consent-first Analytics (UK GDPR/PECR) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      functionality_storage: 'denied',
+      security_storage: 'granted'
+    });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GWC6PDJ1P0"></script>
+  <script>
+    gtag('js', new Date());
+  </script>
 </head>
 
 <body class="product-page">
@@ -40,8 +55,11 @@
     </main>
 
     <footer class="product-footer" role="contentinfo">
-      <div class="container">
-        <p>&copy; 2025 <a href="/">Wu Technologies</a>. All rights reserved.</p>
+      <div class="container footer-content">
+        <p class="footer-copyright">&copy; 2025 <a href="/">Wu Technologies</a>. All rights reserved.</p>
+        <p class="footer-links">
+          <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a>
+        </p>
       </div>
     </footer>
   </div>
@@ -55,6 +73,7 @@
       });
     });
   </script>
+  <script src="/assets/js/cookie-consent.js" defer></script>
 </body>
 
 </html>

@@ -24,14 +24,20 @@
   <meta name="twitter:description" content="Learn about Wu Technologies — Founded in 2014, we build intelligent systems for workflow automation, decision-making enhancement, and data processing." />
   <meta name="twitter:image" content="https://wu-tec.co.uk/assets/img/og-image.png" />
   <link rel="stylesheet" href="/styles.css">
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GWC6PDJ1P0"></script>
+  <!-- Consent-first Analytics (UK GDPR/PECR) -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      functionality_storage: 'denied',
+      security_storage: 'granted'
+    });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GWC6PDJ1P0"></script>
+  <script>
     gtag('js', new Date());
-
-    gtag('config', 'G-GWC6PDJ1P0');
   </script>
 </head>
 
@@ -79,10 +85,14 @@
   </main>
 
   <footer class="site-footer" role="contentinfo">
-    <div class="container">
-      <p>© 2025 Wu Technologies. All rights reserved.</p>
+    <div class="container footer-content">
+      <p class="footer-copyright">© 2025 Wu Technologies. All rights reserved.</p>
+      <p class="footer-links">
+        <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a>
+      </p>
     </div>
   </footer>
+  <script src="/assets/js/cookie-consent.js" defer></script>
 </body>
 
 </html>
