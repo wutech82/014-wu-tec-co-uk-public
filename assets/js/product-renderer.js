@@ -34,7 +34,6 @@ class ProductRenderer {
 // Load marked.js from CDN
 if (typeof marked === 'undefined') {
   const script = document.createElement('script');
-  script.src = 'https://cdn.jsdelivr.net/npm/marked@11.1.1/+esm';
-  script.type = 'module';
+  script.src = 'https://cdn.jsdelivr.net/npm/marked@11.1.1/marked.min.js';
   document.head.appendChild(script);
 }
